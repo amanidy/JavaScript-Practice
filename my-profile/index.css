@@ -50,12 +50,22 @@ body{
   margin-left: 50px;
   margin-bottom: 0;
 }
+#submit-btn{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color:blue;
+  cursor: poiner;
+  margin-bottom: 0;
+  color: #fff;
+  font-size: 20px;
+}
 .intro-container #github-el{
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
   background-color:blue;
-  margin-left: 400px;
+  margin-left: 250px;
   margin-bottom: 0;
 }
 .contact-container h2{
@@ -69,4 +79,26 @@ body{
   font-size: 30px;
   margin-top: 0;
   font-size: semi-bold;
+}
+input{
+  display:block;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 20px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+}
+textarea{
+  display:block;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
 }
