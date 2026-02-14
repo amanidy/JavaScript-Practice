@@ -1,6 +1,8 @@
+//comparing execution order function 
 function timeComplexity() {
   
   
+  /*a nested loop that takes array and target*/
   function nestedLoops(arr,x){
     let counter = 0;
     for(let i = 0;i < arr.length;i++){
@@ -18,7 +20,7 @@ function timeComplexity() {
   }
   
   
-  
+  /*a two pointer function that takes array and target*/
   function twoPointers(array,x){
     let counter = 0;
     let i = 0;
@@ -50,4 +52,5 @@ function timeComplexity() {
   }
 }
 
+console.log(timeComplexity());
 
