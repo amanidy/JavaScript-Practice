@@ -26,13 +26,17 @@ function createResource() {
     }
   ];
   
-  addResource(resources,4,"Clothes",1000,"Nairobi","14/05/2026")
+  addResource(resources,4,"Clothes",1000,"Nairobi",9,"14/05/2026");
+  const result = priorityAreas(resources);
   
-  return resources;
+  return {
+    "allResources":resources,
+    "highPriorityAreas":result
+  };
 }
 
-
-function addResource(resources,id,title, quantity,location,expiry_date){
+m 
+function addResource(resources,id,title, quantity,location,severity_score,expiry_date){
   
   
   
@@ -41,6 +45,7 @@ function addResource(resources,id,title, quantity,location,expiry_date){
     "title":title,
     "quantity":quantity,
     "location": location,
+    "severity_score":severity_score,
     "expiry_date":expiry_date
   })
   
@@ -48,13 +53,13 @@ function addResource(resources,id,title, quantity,location,expiry_date){
   
 }
 
-function priorityAreas(locations){
+function priorityAreas(resources){
   const highPrioritylocations = [];
   const threshold = 3;
   
-  for(let i = 0;i<locations.length;i++){
-    if(locations[i].severity_score> threshold){
-      highPrioritylocations.push(locations[i]);
+  for(let i = 0;i<resources.length;i++){
+    if(resources[i].severity_score> threshold){
+      highPrioritylocations.push(resources[i].location);
     }
     
     
