@@ -132,3 +132,29 @@ function allocateResources(resources, highPriorityLocations) {
     allocationPerLocation: allocationResults
   };
 }
+
+
+const allocationHistory =[];
+
+allocationHistory.push(JSON.parse(JSON.stringify(allocationResults)));
+
+//undoAllocation function 
+function undoAllocation(allocationHistory){
+  
+  if(allocationHistory.length===0){
+    console.log("Nothing to return")
+    return null;
+  }
+  
+  
+
+  const previousAllocation = allocationHistory.pop();
+
+  console.log("Undo successful.");
+
+  return {
+    updatedResources: previousAllocation.updatedResources,
+    allocationPerLocation: previousAllocation.allocationPerLocation
+  }
+
+}
